@@ -8,9 +8,25 @@ const todos = [
 
 function getCompletedTodo(todos) {
   // Start coding here
+  return todos.filter(getValidatedKey);
 }
 
-getCompletedTodo(todos);
+function getValidatedKey(array) {
+  return array.completed === true;
+  
+  /*let prototype = [];
+
+  for (let i = 0; i < array.length; i++) {
+  if (array[i].completed === true) {
+    return prototype.push(array[i]);
+    }
+  }*/
+}
+
+let validatedArray = getCompletedTodo(todos);
+
+
+console.log(validatedArray);
 
 /* 
 	Output:
