@@ -8,12 +8,18 @@ const todos = [
 
 function getTodoTopics(todos) {
   // Start coding here
+  return todos.map(searchTopic);
 }
 
-getTodoTopics(todos);
+function searchTopic(array) {
+	return array.topic;
+}
 
-/* 
-	Output:
+let gottenTopic = getTodoTopics(todos)
+
+console.log(gottenTopic);
+
+/* Output:
 	[
 		'Doing pre-work',
 		'Workout',
@@ -22,3 +28,7 @@ getTodoTopics(todos);
 		'Clean the room'
 	]
 */
+
+
+
+  
